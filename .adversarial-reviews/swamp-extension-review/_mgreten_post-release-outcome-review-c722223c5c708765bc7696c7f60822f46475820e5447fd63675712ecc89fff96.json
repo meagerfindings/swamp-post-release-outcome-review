@@ -1,0 +1,66 @@
+{
+  "extension": "@mgreten/post-release-outcome-review",
+  "version": "2026.08.23.1",
+  "reviewedAt": "2026-08-23T21:12:06Z",
+  "dimensions": [
+    {
+      "id": "credentials-secrets",
+      "verdict": "na",
+      "note": "No credentials, network access, or external systems."
+    },
+    {
+      "id": "logging-quality",
+      "verdict": "pass",
+      "note": "Entry and completion logs contain only the bounded record identifier."
+    },
+    { "id": "error-handling", "verdict": "pass" },
+    {
+      "id": "testing-completeness",
+      "verdict": "pass",
+      "note": "Tests cover chronology, provenance digest, freshness, malformed and tampered input, deterministic derivation, replay, identity substitution, and authority boundaries."
+    },
+    {
+      "id": "idempotency-resilience",
+      "verdict": "pass",
+      "note": "recordId is bound to reviewId; identical replays validate identically and target the same resource name."
+    },
+    {
+      "id": "api-contracts",
+      "verdict": "na",
+      "note": "No external API calls."
+    },
+    {
+      "id": "resource-management",
+      "verdict": "pass",
+      "note": "Permanent records bound identifiers and rationale, with metric and evidence collections capped at 100."
+    },
+    { "id": "published-surface-hygiene", "verdict": "pass" },
+    {
+      "id": "schema-strictness",
+      "verdict": "pass",
+      "note": "Nested objects are strict; exact references and evidence carry lowercase SHA-256 digests."
+    },
+    { "id": "lifetime-gc", "verdict": "pass" },
+    {
+      "id": "crud-completeness",
+      "verdict": "na",
+      "note": "Append-only recommendation recorder, not a CRUD lifecycle model."
+    },
+    {
+      "id": "preflight-checks",
+      "verdict": "na",
+      "note": "Persistence-only operation with no external mutation."
+    },
+    { "id": "instance-names", "verdict": "pass" },
+    {
+      "id": "data-access",
+      "verdict": "na",
+      "note": "No read or stored-state lifecycle operation."
+    },
+    {
+      "id": "version-upgrades",
+      "verdict": "na",
+      "note": "Initial unpublished version."
+    }
+  ]
+}
